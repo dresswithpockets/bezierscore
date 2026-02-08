@@ -80,11 +80,11 @@ func (s *System) control() float64 {
 //	scoreMax         := 100000.0
 //	coeff            := 0.5
 //	exp              := 1.33
-//	system := bezierscore.New(participantCount, scoreMin, scoreMax, coeff, exp)
+//	system           := bezierscore.New(participantCount, scoreMin, scoreMax, coeff, exp)
 //
-//	firstPlace := system.Score(1)
+//	firstPlace  := system.Score(1)
 //	secondPlace := system.Score(2)
-//	lastPlace := system.Score(participantCount)
+//	lastPlace   := system.Score(participantCount)
 func (s *System) Score(position uint) (score float64, ok bool) {
 	if position == 0 || position > s.participantCount {
 		return 0, false
@@ -106,10 +106,10 @@ func (s *System) Score(position uint) (score float64, ok bool) {
 //	scoreMax         := 100000.0
 //	coeff            := 0.5
 //	exp              := 1.33
-//	system := bezierscore.New(participantCount, scoreMin, scoreMax, coeff, exp)
+//	system           := bezierscore.New(participantCount, scoreMin, scoreMax, coeff, exp)
 //
 //	buf := make([]float, participantCount)
-//	_ := system.ScoreAll(buf)
+//	_   := system.ScoreAll(buf)
 func (s *System) ScoreAll(buf []float64) (ok bool) {
 	if uint(len(buf)) != s.participantCount {
 		return false
